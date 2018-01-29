@@ -1,0 +1,70 @@
+.logo {
+    max-width: 75px;
+}
+
+/* body {
+    padding-top: 100px;
+} */
+
+.img-carosel {
+    max-height: 680px;
+}
+
+link {
+    font-size: 1.3em !important;
+}
+
+a {
+  color: #151f5b !important;
+}
+
+.box-shadow {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .05), 0 4px 8px 0 rgba(0, 0, 0, .05);
+}
+
+#home-quote {
+    background: url('../img/spain.jpg') center center;
+    background-size: cover;
+    min-height: 260px;
+}
+
+@media (max-width: 767px) {
+    #home-quote .display-4 {
+        font-size: 2.5rem;
+    }
+    body {
+        padding-top: 0px;
+    }
+    .fixed-top {
+        position: relative;
+    }
+}
+
+.lista-plano li+li {
+    border-top: 1px solid rgba(0, 0, 0, .2);
+}
+
+.lista-plano li {
+    padding: 1rem;
+}
+
+.bg-blue {
+    background: #151f5b;
+}
+
+.font-blue {
+    color: #151f5b !important;
+}
+
+.bg-yellow {
+    background: rgba(255, 182, 0, .75)
+}
+
+.bg-dark {
+    background-color:rgba(255, 182, 0, .75);
+}
+
+#line {
+    background-color: #151f5b;
+    height: 6px;
+}
