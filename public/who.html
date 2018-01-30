@@ -5,12 +5,31 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Lenguajes</title>
+    <link rel="shortcut icon" href="img\favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css\main.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css\animate.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
         crossorigin="anonymous">
 </head>
+
+<style>
+    /* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+
+    #map {
+        height: 200px;
+    }
+
+    /* Optional: Makes the sample page fill the window. */
+
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+</style>
 
 <body>
 
@@ -71,13 +90,17 @@
             <div class="col-md-6 col-sm-12">
                 <h3>Quem somos?</h3>
                 <p class="text-justify">
-                    Somos um grupo formado por profissionais qualificados e com vasta experiência na área. Entre eles, professores e nativos de cada idioma que, juntos, trabalham para que os resultados de nossos serviços sejam muito mais que satisfatórios.
+                    Somos um grupo formado por profissionais qualificados e com vasta experiência na área. Entre eles, professores e nativos
+                    de cada idioma que, juntos, trabalham para que os resultados de nossos serviços sejam muito mais que
+                    satisfatórios.
                 </p>
                 <p class="text-justify">
                     Os que integram esta equipe, além de suas capacitações, são amantes da linguagem, o que torna nosso trabalho ainda mais eficiente.
                 </p>
                 <p class="text-justify">
-                    Lhe convidamos a que navegue por nosso site, conheça nosso trabalho e entre em contato conosco para que possamos ter o prazer de fazer o melhor atendimento possivél, com qualidade  e eficiência. Porque sempre procuramos atingir suas necessidades e expectativas.
+                    Lhe convidamos a que navegue por nosso site, conheça nosso trabalho e entre em contato conosco para que possamos ter o prazer
+                    de fazer o melhor atendimento possivél, com qualidade e eficiência. Porque sempre procuramos atingir
+                    suas necessidades e expectativas.
                 </p>
                 <p class="text-justify">
                     Seja bem-vindo ao nosso espaço e comunique-se com o mundo!
@@ -87,13 +110,18 @@
             <div class="col-md-6 col-sm-12">
                 <h3>¿Quiénes somos?</h3>
                 <p class="text-justify">
-                    Somos un grupo formado por profesionales calificados y con amplia experiencia en el área. Entre ellos, profesores y nativos en cada idioma, que juntos, trabajan para que los resultados de nuestros servicios sean mucho más que satisfactorios.
+                    Somos un grupo formado por profesionales calificados y con amplia experiencia en el área. Entre ellos, profesores y nativos
+                    en cada idioma, que juntos, trabajan para que los resultados de nuestros servicios sean mucho más que
+                    satisfactorios.
                 </p>
                 <p class="text-justify">
-                    Los que integran este equipo, además de sus capacitaciones, son amantes del lenguaje, lo que torna nuestro trabajo aún más eficiente.
+                    Los que integran este equipo, además de sus capacitaciones, son amantes del lenguaje, lo que torna nuestro trabajo aún más
+                    eficiente.
                 </p>
                 <p class="text-justify">
-                    Le invitamos a navegar en nuestro sitio, conocer nuestro trabajo y a entrar en contacto con nosostros para tener el placer de atenderlo de la mejor manera posible, con calidad, oportunidad y eficiencia. Porque nosotros siempre nos esforzaremos por satisfascer sus necesidades y expectativas.
+                    Le invitamos a navegar en nuestro sitio, conocer nuestro trabajo y a entrar en contacto con nosostros para tener el placer
+                    de atenderlo de la mejor manera posible, con calidad, oportunidad y eficiencia. Porque nosotros siempre
+                    nos esforzaremos por satisfascer sus necesidades y expectativas.
                 </p>
                 <p class="text-justify">
                     Sea bienvenido a nuestro espacio para comunicarse con el mundo.
@@ -117,6 +145,10 @@
         </div>
     </section>
 
+
+    <div id="line-yellow"></div>
+    <div id="map"></div>
+    <div id="line"></div>
 
     <footer class="bg-dark text-white">
         <div class="container py-4">
@@ -178,6 +210,36 @@
             <p class="mb-0">Lenguajes © 2018. Todos direitos reservados.</p>
         </div>
     </footer>
+
+    <script>
+        // This example displays a map with the language set to Arabic and the
+        // regions set to Egypt. These settings are specified in the HTML script
+        // element when loading the Google Maps JavaScript API.
+        // Setting the language shows the map in the language of your choice.
+        // Setting the region biases the geocoding results to that region.
+        // In addition, the page's html element sets the text direction to
+        // right-to-left.
+        function initMap() {
+            var cairo = { lat: -26.8261117, lng: -49.276143 };
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                scaleControl: true,
+                center: cairo,
+                zoom: 15
+            });
+
+            var infowindow = new google.maps.InfoWindow;
+            infowindow.setContent('<img src="img/logo-small.png" alt="Flag" style="max-width: 50px;">');
+
+            var marker = new google.maps.Marker({ map: map, position: cairo });
+            marker.addListener('click', function () {
+                infowindow.open(map, marker);
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA15oXV-P2OLx2IntiumGDDUEpYyj1wdOQ&callback=initMap" async
+        defer></script>
+
 
     <!-- <script src="main.js"></script> -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>

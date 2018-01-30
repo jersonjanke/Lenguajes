@@ -5,12 +5,31 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Lenguajes</title>
+    <link rel="shortcut icon" href="img\favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css\main.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css\animate.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
         crossorigin="anonymous">
 </head>
+
+<style>
+    /* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+
+    #map {
+        height: 200px;
+    }
+
+    /* Optional: Makes the sample page fill the window. */
+
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+</style>
 
 <body>
 
@@ -54,7 +73,8 @@
 
     <div id="line"></div>
 
-    <div class="animated fadeInLeft" style="max-height: 300px; display: flex;" id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <div class="animated fadeInLeft" style="max-height: 300px; display: flex;" id="carouselExampleIndicators" class="carousel slide"
+        data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -130,7 +150,11 @@
         </div>
     </section>
 
-    <footer class="bg-dark text-white mt-5">
+    <div id="line"></div>
+        <div id="map"></div>
+    <div id="line"></div>
+
+    <footer class="bg-dark text-white">
         <div class="container py-4">
             <div class="row">
                 <div class="col-md-4">
@@ -190,6 +214,36 @@
             <p class="mb-0">Lenguajes © 2018. Todos direitos reservados.</p>
         </div>
     </footer>
+
+
+    <script>
+        // This example displays a map with the language set to Arabic and the
+        // regions set to Egypt. These settings are specified in the HTML script
+        // element when loading the Google Maps JavaScript API.
+        // Setting the language shows the map in the language of your choice.
+        // Setting the region biases the geocoding results to that region.
+        // In addition, the page's html element sets the text direction to
+        // right-to-left.
+        function initMap() {
+            var cairo = { lat: -26.8261117, lng: -49.276143 };
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                scaleControl: true,
+                center: cairo,
+                zoom: 15
+            });
+
+            var infowindow = new google.maps.InfoWindow;
+            infowindow.setContent('<img src="img/logo-small.png" alt="Flag" style="max-width: 50px;">');
+
+            var marker = new google.maps.Marker({ map: map, position: cairo });
+            marker.addListener('click', function () {
+                infowindow.open(map, marker);
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA15oXV-P2OLx2IntiumGDDUEpYyj1wdOQ&callback=initMap" async
+        defer></script>
 
     <!-- <script src="main.js"></script> -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
