@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lenguajes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css\main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css\animate.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+</head>
+
+<style>
+    /* Always set the map height explicitly to define the size of the div
+     * element that contains the map. */
+    #map {
+      height: 300px;
+    }
+    /* Optional: Makes the sample page fill the window. */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+
+<body>
+    <!-- AIzaSyA15oXV-P2OLx2IntiumGDDUEpYyj1wdOQ -->
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded bg-yellow py-3">
+            
+            <button class="navbar-toggler navbar-toggler-right mt-2" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+                <a class="navbar-brand" href="#">
+                    <img src="img/logo-small.png" alt="Flag" class="logo">
+                </a>
+
+            <div class="collapse navbar-collapse justify-content-md-center" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+                    <li class="nav-item active">
+                        <a style="font-size: 1.0em; font-weight: bold;" class="nav-link" href="index.html">
+                            Início <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: 1.0em; font-weight: bold;" class="nav-link" href="who.html">
+                            Quem somos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: 1.0em; font-weight: bold;" class="nav-link" href="services.html">
+                            Serviços
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: 1.0em; font-weight: bold;" class="nav-link" href="contact.html">
+                            Contato
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    <div id="line"></div>
+
+    <section class="container-fluid animated fadeInLeft">
+        <div class="row bg-blue text-white p-1">
+            <div class="col-12">
+                <h1 style="font-size: 1.5em;">Contato</h1>
+            </div>
+            <div class="col-12">
+                <div style="font-size: 1.0em;">Lenguajes - Entre em contato</div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="container-fluid m-5 animated fadeInLeft">
+        <div class="row">
+            <div class="col-lg-6 col-sm-12">
+                <form>
+                    <div class="form-group">
+                      <label for="formGroupExampleInput">Nome</label>
+                      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Informe seu nome">
+                    </div>
+                    <div class="form-group">
+                      <label for="formGroupExampleInput2">Email</label>
+                      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Informe seu email">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Assunto</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Informe seu assunto">
+                      </div>
+                      <div class="form-group">
+                        <label for="formGroupExampleInput2">Mensagem</label>
+                        <textarea class="form-control" id="exampleTextarea" rows="5"></textarea>
+                      </div>
+                      <button type="button" class="btn btn-outline-primary">Enviar</button>
+                  </form>
+            </div>
+        </div>
+    </section>
+
+    <div id="line"></div>
+    <div id="map"></div>
+    <div id="line-yellow"></div>
+
+    <section class="container-fluid">
+        <div class="row bg-blue text-white p-4">
+            <div class="col-12 text-center">
+                <h1 class="display-4">Lenguajes</h1>
+            </div>
+            <div class="col-12 text-center">
+                <div style="font-size: 1.8em;">Comunique-se com o mundo!</div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="bg-dark text-white">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4 class="h6 font-blue">PÁGINAS</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a style="font-weight: 500;" href="index.html">Início</a>
+                        </li>
+                        <li>
+                            <a style="font-weight: 500;" href="who.html">Quem somos</a>
+                        </li>
+                        <li>
+                            <a style="font-weight: 500;" href="services.html">Serviços</a>
+                        </li>
+                        <li>
+                            <a style="font-weight: 500;" href="contact.html">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="h6 font-blue">DADOS DE CONTATO</h4>
+                    <ul class="list-unstyled text-secondary font-blue">
+                        <li>
+                            <a href="#"></a>
+                            <i class="fas fa-building fa-2x"></i>
+                            <span style="display: inline; font-weight: 500;">De Seg. à Sex. das 8h às 18h</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-whatsapp-square fa-2x"></i>
+                                <span style="display: inline; font-weight: 500;">55 (47) 97727405</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="h6 font-blue">REDES SOCIAIS</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-facebook-square fa-2x"></i>
+                                <span style="display: inline; font-weight: 500;">Lenguajes</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-envelope fa-2x"></i>
+                                <span style="display: inline; font-weight: 500;">lenguajesltda@gmail.com</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bg-blue text-center py-3">
+            <p class="mb-0">Lenguajes © 2018. Todos direitos reservados.</p>
+        </div>
+    </footer>
+
+    
+    <script>
+      // This example displays a map with the language set to Arabic and the
+      // regions set to Egypt. These settings are specified in the HTML script
+      // element when loading the Google Maps JavaScript API.
+      // Setting the language shows the map in the language of your choice.
+      // Setting the region biases the geocoding results to that region.
+      // In addition, the page's html element sets the text direction to
+      // right-to-left.
+      function initMap() {
+        var cairo = {lat: -26.8261117, lng: -49.276143};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          scaleControl: true,
+          center: cairo,
+          zoom: 15
+        });
+
+        var infowindow = new google.maps.InfoWindow;
+        infowindow.setContent('<img src="img/logo-small.png" alt="Flag" style="max-width: 150px;">');
+
+        var marker = new google.maps.Marker({map: map, position: cairo});
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA15oXV-P2OLx2IntiumGDDUEpYyj1wdOQ&callback=initMap"
+    async defer></script>
+
+    <!-- <script src="main.js"></script> -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
