@@ -1,5 +1,5 @@
 .logo {
-    max-width: 50px;
+    max-width: 175px;
 }
 
 /* body {
@@ -49,7 +49,7 @@ a {
 }
 
 .bg-yellow {
-    background: rgba(255, 182, 0, .75) !important;
+    background: rgb(222, 201, 43) !important;
 }
 
 .bg-dark {
@@ -64,4 +64,19 @@ a {
 #line-yellow {
     background-color: rgba(255, 182, 0, .75);
     height: 6px;
+}
+
+.img-center {
+    max-height: 100px;
+    position: absolute;
+    left: 43%;
+}
+
+item-menu {
+    color: #000 !important;
+}
+
+.item-menu:hover {
+    text-decoration: none;
+    font-weight: bold;
 }

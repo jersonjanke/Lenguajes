@@ -16,20 +16,24 @@
 <style>
     /* Always set the map height explicitly to define the size of the div
      * element that contains the map. */
+
     #map {
-      height: 300px;
+        height: 300px;
     }
+
     /* Optional: Makes the sample page fill the window. */
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
+
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
     }
-  </style>
+</style>
 
 <body>
     <!-- AIzaSyA15oXV-P2OLx2IntiumGDDUEpYyj1wdOQ -->
-    <nav class="navbar navbar-toggleable-md navbar-light bg-faded bg-yellow py-3">
+    <!-- <nav class="navbar navbar-toggleable-md navbar-light bg-faded bg-yellow py-3">
             
             <button class="navbar-toggler navbar-toggler-right mt-2" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -63,7 +67,22 @@
                     </li>
                 </ul>
             </div>
+        </nav> -->
+
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 bg-white border-bottom bg-yellow">
+        <h5 class="my-0 mr-md-auto font-weight-normal">
+            <a href="index.html">
+                <img class="rounded mx-auto d-block logo" src="img/logo-side.png" alt="">
+            </a>
+        </h5>
+        <!-- <img style="max-height: 75px;" class="rounded mx-auto d-block img-center" src="img/logo-small.png" alt="Flag"> -->
+        <nav class="my-2 my-md-0 mr-md-3">
+            <a class="p-2 item-menu" href="index.html">Início</a>
+            <a class="p-2 item-menu" href="who.html">Quem somos</a>
+            <a class="p-2 item-menu" href="services.html">Serviços</a>
+            <a class="p-2 item-menu" href="contact.html">Contato</a>
         </nav>
+    </div>
 
     <div id="line"></div>
 
@@ -77,29 +96,29 @@
             </div>
         </div>
     </section>
-    
+
     <section class="container-fluid m-5 animated fadeInLeft">
         <div class="row">
             <div class="col-lg-6 col-sm-12">
                 <form>
                     <div class="form-group">
-                      <label for="formGroupExampleInput">Nome</label>
-                      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Informe seu nome">
+                        <label for="formGroupExampleInput">Nome</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Informe seu nome">
                     </div>
                     <div class="form-group">
-                      <label for="formGroupExampleInput2">Email</label>
-                      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Informe seu email">
+                        <label for="formGroupExampleInput2">Email</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Informe seu email">
                     </div>
                     <div class="form-group">
                         <label for="formGroupExampleInput2">Assunto</label>
                         <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Informe seu assunto">
-                      </div>
-                      <div class="form-group">
+                    </div>
+                    <div class="form-group">
                         <label for="formGroupExampleInput2">Mensagem</label>
                         <textarea class="form-control" id="exampleTextarea" rows="5"></textarea>
-                      </div>
-                      <button type="button" class="btn btn-outline-primary">Enviar</button>
-                  </form>
+                    </div>
+                    <button type="button" class="btn btn-outline-primary">Enviar</button>
+                </form>
             </div>
         </div>
     </section>
@@ -181,35 +200,35 @@
         </div>
     </footer>
 
-    
+
     <script>
-      // This example displays a map with the language set to Arabic and the
-      // regions set to Egypt. These settings are specified in the HTML script
-      // element when loading the Google Maps JavaScript API.
-      // Setting the language shows the map in the language of your choice.
-      // Setting the region biases the geocoding results to that region.
-      // In addition, the page's html element sets the text direction to
-      // right-to-left.
-      function initMap() {
-        var cairo = {lat: -26.8261117, lng: -49.276143};
+        // This example displays a map with the language set to Arabic and the
+        // regions set to Egypt. These settings are specified in the HTML script
+        // element when loading the Google Maps JavaScript API.
+        // Setting the language shows the map in the language of your choice.
+        // Setting the region biases the geocoding results to that region.
+        // In addition, the page's html element sets the text direction to
+        // right-to-left.
+        function initMap() {
+            var cairo = { lat: -26.8261117, lng: -49.276143 };
 
-        var map = new google.maps.Map(document.getElementById('map'), {
-          scaleControl: true,
-          center: cairo,
-          zoom: 15
-        });
+            var map = new google.maps.Map(document.getElementById('map'), {
+                scaleControl: true,
+                center: cairo,
+                zoom: 15
+            });
 
-        var infowindow = new google.maps.InfoWindow;
-        infowindow.setContent('<img src="img/logo-small.png" alt="Flag" style="max-width: 150px;">');
+            var infowindow = new google.maps.InfoWindow;
+            infowindow.setContent('<img src="img/logo-small.png" alt="Flag" style="max-width: 150px;">');
 
-        var marker = new google.maps.Marker({map: map, position: cairo});
-        marker.addListener('click', function() {
-          infowindow.open(map, marker);
-        });
-      }
+            var marker = new google.maps.Marker({ map: map, position: cairo });
+            marker.addListener('click', function () {
+                infowindow.open(map, marker);
+            });
+        }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA15oXV-P2OLx2IntiumGDDUEpYyj1wdOQ&callback=initMap"
-    async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA15oXV-P2OLx2IntiumGDDUEpYyj1wdOQ&callback=initMap" async
+        defer></script>
 
     <!-- <script src="main.js"></script> -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
