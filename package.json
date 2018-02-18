@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "nodemon server",
     "e2e": "repo-tools test deploy",
     "test": "repo-tools test app",
     "cover": "nyc --cache npm test; nyc report --reporter=html"
@@ -20,7 +20,10 @@
   },
   "homepage": "https://github.com/jersonjanke/Lenguajes#readme",
   "dependencies": {
-    "express": "4.16.2"
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.7",
+    "express": "4.16.2",
+    "nodemailer": "^4.4.2"
   },
   "devDependencies": {
     "@google-cloud/nodejs-repo-tools": "2.1.4",

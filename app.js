@@ -15,11 +15,46 @@
 
 const express = require('express');
 
-const app = express();
+const app = express(),
+path = require('path'),
+nodeMailer = require('nodemailer'),
+bodyParser = require('body-parser');
 
+app.set('view engine', 'ejs');
 // [START hello_world]
 app.use(express.static('public'));
 // [END hello_world]
+
+app.get('/', function (req, res) {
+  res.render('index');
+});
+
+app.post('/send-email', function (req, res) {
+  let transporter = nodeMailer.createTransport({
+      host: 'smtp.gmail.com',
+      port: 465,
+      secure: true,
+      auth: {
+          user: 'jersonjanke',
+          pass: 'cradle13'
+      }
+  });
+  let mailOptions = {
+      from: '"Jerson Janke" <jersonjanke@gmail.com>', // sender address
+      to: "jersonjanke@gmail.com>", // list of receivers
+      subject: "Title node", // Subject line
+      text: "Test", // plain text body
+      html: '<b>NodeJS Email Tutorial</b>' // html body
+  };
+
+  transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+          return console.log(error);
+      }
+      console.log('Message %s sent: %s', info.messageId, info.response);
+          res.render('index');
+      });
+  });
 
 if (module === require.main) {
   // [START server]
